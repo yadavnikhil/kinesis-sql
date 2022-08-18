@@ -82,7 +82,7 @@ private[kinesis] class KinesisSourceProvider extends DataSourceRegister
     val sessionToken = caseInsensitiveParams.get(AWS_SESSION_TOKEN).getOrElse("")
     val awsStsRoleArn = caseInsensitiveParams.get(AWS_STS_ROLE_ARN).getOrElse("")
     val awsStsSessionName = caseInsensitiveParams.get(AWS_STS_SESSION_NAME).getOrElse("")
-    val awsUseInstanceProfile = caseInsensitiveParams.getOrElse(AWS_USE_INSTANCE_PROFILE, "true")
+    val awsUseInstanceProfile = caseInsensitiveParams.getOrElse(AWS_USE_INSTANCE_PROFILE, "false")
       .toBoolean
 
     val regionName = caseInsensitiveParams.get(REGION_NAME_KEY)
