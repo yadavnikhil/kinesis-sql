@@ -95,7 +95,7 @@ private[kinesis] object CachedKinesisProducer extends Logging {
       KinesisSourceProvider.AWS_STS_SESSION_NAME, "").toString
 
     val awsUseInstanceProfile = producerConfiguration.getOrElse(
-      KinesisSourceProvider.AWS_USE_INSTANCE_PROFILE, "true").toBoolean
+      KinesisSourceProvider.AWS_USE_INSTANCE_PROFILE, "false").toBoolean
 
     val endpoint = producerConfiguration.getOrElse(
       KinesisSourceProvider.SINK_ENDPOINT_URL, KinesisSourceProvider.DEFAULT_KINESIS_ENDPOINT_URL)
